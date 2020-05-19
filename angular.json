@@ -119,6 +119,11 @@
           }
         }
       }
-    }},
-  "defaultProject": "rxjs-step-by-step"
+    }
+  },
+  "defaultProject": "rxjs-step-by-step",
+  "cli": {
+    "analytics": false,
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

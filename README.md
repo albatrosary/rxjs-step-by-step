@@ -1,27 +1,20 @@
-# RxjsStepByStep
+npm install @ngrx/store --save
+npm install @ngrx/store-devtools --save
+npm install @ngrx/schematics --save-dev
+npm install @ngrx/{store,effects,entity,store-devtools} --save
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+ng generate @ngrx/schematics:action ActionName --creators
+ng generate @ngrx/schematics:reducer ReducerName --creators
+ng generate @ngrx/schematics:effect EffectName --creators
+ng generate @ngrx/schematics:entity EntityName --creators
+ng generate @ngrx/schematics:feature FeatureName --creators
 
-## Development server
+ng g module contents/sample --routing
+ng g component contents/sample/ui
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ng generate @ngrx/schematics:store contents/sample/state --root --module sample.module.ts
+ng generate @ngrx/schematics:action contents/sample/action --creators
+ng generate @ngrx/schematics:reducer contents/sample/reducer --module contents/sample/sample.module.ts --creators
+ng generate @ngrx/schematics:effect contents/sample/effect --root --module contents/sample/sample.module.ts --creators
+ng generate @ngrx/schematics:entity contents/sample/ui --module sample.module.ts --creators
+ng generate @ngrx/schematics:feature contents/sample/ui/ui --module contents/sample/sample.module.ts --creators
