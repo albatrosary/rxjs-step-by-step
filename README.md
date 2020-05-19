@@ -1,3 +1,4 @@
+```
 npm install @ngrx/store --save
 npm install @ngrx/store-devtools --save
 npm install @ngrx/schematics --save-dev
@@ -18,3 +19,4 @@ ng generate @ngrx/schematics:reducer contents/sample/reducer --module contents/s
 ng generate @ngrx/schematics:effect contents/sample/effect --root --module contents/sample/sample.module.ts --creators
 ng generate @ngrx/schematics:entity contents/sample/ui --module sample.module.ts --creators
 ng generate @ngrx/schematics:feature contents/sample/ui/ui --module contents/sample/sample.module.ts --creators
+```
